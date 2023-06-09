@@ -9,7 +9,7 @@ header {
   letter-spacing: .5rem;
 }
 
-.desc-title {
+.desc-title-one {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +17,21 @@ header {
   text-align: center;
   color: #7DF9FF;
   text-shadow: 1px 1px 1px #FDD023 ;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  letter-spacing: .5rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.desc-title-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 1px yellow ;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 56px;
   letter-spacing: .5rem;
@@ -32,6 +47,10 @@ header {
 }
 
 .render {
+  display: flex;
+  align-items: center;
+  background-color: #7DF9FF;
+  padding: 1rem;
 }
 
 .useEffect {
@@ -59,11 +78,8 @@ span {
   border-radius: .5rem;
 }
 .section-container-two {
-  background-color: rgb(245, 245, 245);
-  border: 0.1rem solid black;
-  border-radius: 0.5rem;
-  margin: 1.5rem;
-  box-shadow: 0.1rem 0.1rem 0.1rem lightgray;
+  margin: 5rem;
+  border-radius: .5rem;
 }
 .section-container-three {
   background-color: rgb(245, 245, 245);
@@ -92,6 +108,18 @@ span {
   letter-spacing: .1rem;
 }
 
+.section-container-two button {
+  flex: 1; 
+  border: 0;
+  padding: 0.4rem;
+  cursor: pointer;
+  font-size: medium;
+  color: black;
+  background-color: yellow;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: .1rem;
+}
+
 .left-button {
   border-radius: .5rem 0 0 0;
 }
@@ -115,7 +143,7 @@ button:hover {
   color: black;
 }
 
-.messageBox {
+.messageBox-one {
   background-color: rgba(255, 255, 255, .15);  
   backdrop-filter: blur(5px); 
   display: flex;
@@ -132,8 +160,28 @@ button:hover {
   font-size: 26px;
 }
 
+.messageBox-two {
+  background-color: rgba(255, 255, 255, 0.397);  
+  backdrop-filter: blur(5px); 
+  display: flex;
+  min-width: 25rem;
+  max-width: 25rem;
+  min-height: 8rem;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0 0 .5rem .5rem;
+  text-align: center;
+  color: black;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: .1rem;
+  font-size: 26px;
+}
+
 @media (max-width: 650px) {
   .state {
+    flex-direction: column;
+  }
+  .render {
     flex-direction: column;
   }
   .messageBox {

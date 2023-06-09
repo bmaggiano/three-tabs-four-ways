@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import MessageOne from "./components/messageOne";
 import MessageTwo from "./components/messageTwo";
 import MessageThree from "./components/messageThree";
-import LightningIcon from "./components/lightningIcon"
+import LightningIcon from "./components/lightningIcon";
+import RenderIcon from "./components/renderIcon";
 import "./App.css";
 
 //
@@ -47,7 +48,10 @@ export default function App() {
       <main>
         <section className="state">
           <div>
-            <h2 className="desc-title">Active &nbsp;<LightningIcon/></h2>
+            <h2 className="desc-title-one">
+              Active &nbsp;
+              <LightningIcon />
+            </h2>
             <p className="description">
               <span>
                 This method uses state to make a button active and show a
@@ -58,25 +62,31 @@ export default function App() {
           <div className="section-container-one">
             <div className="button-container">
               <button
-                className={active === 1 ? "active-button left-button" : "left-button"}
+                className={
+                  active === 1 ? "active-button left-button" : "left-button"
+                }
                 onClick={() => handleClick(1)}
               >
                 Tab 1
               </button>
               <button
-                className={active === 2 ? "active-button middle-button" : "middle-button"}
+                className={
+                  active === 2 ? "active-button middle-button" : "middle-button"
+                }
                 onClick={() => handleClick(2)}
               >
                 Tab 2
               </button>
               <button
-                className={active === 3 ? "active-button right-button" : "right-button"}
+                className={
+                  active === 3 ? "active-button right-button" : "right-button"
+                }
                 onClick={() => handleClick(3)}
               >
                 Tab 3
               </button>
             </div>
-            <div className="messageBox">
+            <div className="messageBox-one">
               <p>
                 {messages[active - 1] ||
                   "Click on the tabs to see different messages using the active method"}
@@ -87,24 +97,18 @@ export default function App() {
 
         <section className="render">
           <div className="section-container-two">
-            <p className="description">
-              <span>
-                This method uses component rendering based off of state
-                switching from null to a specificed value
-              </span>
-            </p>
             <div className="button-container">
-              <div>
-                <button onClick={showComponentOne}>Tab 1</button>
-              </div>
-              <div>
-                <button onClick={showComponentTwo}>Tab 2</button>
-              </div>
-              <div>
-                <button onClick={showComponentThree}>Tab 3</button>
-              </div>
+                <button className="left-button" onClick={showComponentOne}>
+                  Tab 1
+                </button>
+                <button className="middle-button" onClick={showComponentTwo}>
+                  Tab 2
+                </button>
+                <button className="right-button" onClick={showComponentThree}>
+                  Tab 3
+                </button>
             </div>
-            <div className="messageBox">
+            <div className="messageBox-two">
               {componentToShow === null && (
                 <p>
                   Click on the tabs to see different messages using component
@@ -115,6 +119,18 @@ export default function App() {
               {componentToShow === "two" && <MessageTwo />}
               {componentToShow === "three" && <MessageThree />}
             </div>
+          </div>
+          <div>
+            <h2 className="desc-title-two">
+              Render &nbsp;
+              <RenderIcon />
+            </h2>
+            <p className="description">
+              <span>
+                This method uses component rendering based off of state
+                switching from null to a specificed value
+              </span>
+            </p>
           </div>
         </section>
 
