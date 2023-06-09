@@ -1,38 +1,142 @@
-.App {
+body {
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  letter-spacing: .5rem;
+}
+
+.desc-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  color: #7DF9FF;
+  text-shadow: 1px 1px 1px #FDD023 ;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  letter-spacing: .5rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.state {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 1rem;
+}
+
+.render {
+}
+
+.useEffect {
+}
+
+.title {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.description {
+  text-align: center;
+  margin: 1rem;
+  min-width: 20rem;
+  max-width: 30rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+span {
+  color: rgb(139, 139, 139);
+  font-style: italic;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section-container-one {
+  margin: 5rem;
+  border-radius: .5rem;
+}
+.section-container-two {
+  background-color: rgb(245, 245, 245);
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+  margin: 1.5rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem lightgray;
+}
+.section-container-three {
+  background-color: rgb(245, 245, 245);
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+  margin: 1.5rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem lightgray;
+}
+
+.button-container {
   display: flex;
+  flex: 1;
+  border-radius: .5rem;
+  justify-content: space-evenly;
+}
+
+.section-container-one button {
+  flex: 1; 
+  border: 0;
+  padding: 0.4rem;
+  cursor: pointer;
+  font-size: medium;
+  color: black;
+  background-color: #7DF9FF;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: .1rem;
+}
+
+.left-button {
+  border-radius: .5rem 0 0 0;
+}
+
+.middle-button {
+  border-radius: 0;
+}
+
+.right-button {
+  border-radius: 0 .5rem 0 0;
+}
+
+button:hover {
+  font-size: 14px;
+  transition: .2s;
+  background-color: #37c1c9;
+}
+
+.section-container-one .active-button {
+  background-color: yellow ;
+  color: black;
+}
+
+.messageBox {
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px); 
+  display: flex;
+  min-width: 25rem;
+  max-width: 25rem;
+  min-height: 8rem;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  border-radius: 0 0 .5rem .5rem;
+  text-align: center;
   color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: .1rem;
+  font-size: 26px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 650px) {
+  .state {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .messageBox {
+    min-width: 20rem;
   }
 }
