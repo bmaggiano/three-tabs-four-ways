@@ -4,6 +4,7 @@ import MessageTwo from "./components/messageTwo";
 import MessageThree from "./components/messageThree";
 import LightningIcon from "./components/lightningIcon";
 import RenderIcon from "./components/renderIcon";
+import ReactIcon from "./components/reactIcon"
 import "./App.css";
 
 //
@@ -42,7 +43,7 @@ export default function App() {
   return (
     <>
       <header>
-        <h1 className="title">Three Tabs Three Ways</h1>
+        <h1 className="title">Three Tabs Three Ways<span className="underline"></span></h1>
       </header>
 
       <main>
@@ -126,7 +127,7 @@ export default function App() {
               <RenderIcon />
             </h2>
             <p className="description">
-              <span>
+              <span className="span-dark">
                 This method uses component rendering based off of state
                 switching from null to a specificed value
               </span>
@@ -135,16 +136,22 @@ export default function App() {
         </section>
 
         <section className="useEffect">
-          <div className="section-container-three">
+            <div>
+            <h2 className="desc-title-one">
+              useEffect &nbsp;
+              <ReactIcon />
+            </h2>
             <p className="description">
               <span>
                 This method uses the useEffect hook to set an array of messages
                 in local storage & returns the array value on a user's click
               </span>
             </p>
+            </div>
+          <div className="section-container-three">
             <div className="button-container">
-              <div>
                 <button
+                className="left-button"
                   onClick={() => {
                     const localMessage = localStorage.getItem("messages");
                     const storedMessages = JSON.parse(localMessage);
@@ -153,9 +160,8 @@ export default function App() {
                 >
                   Tab 1
                 </button>
-              </div>
-              <div>
                 <button
+                className="middle-button"
                   onClick={() => {
                     const localMessage = localStorage.getItem("messages");
                     const storedMessages = JSON.parse(localMessage);
@@ -164,9 +170,8 @@ export default function App() {
                 >
                   Tab 2
                 </button>
-              </div>
-              <div>
                 <button
+                className="right-button"
                   onClick={() => {
                     const localMessage = localStorage.getItem("messages");
                     const storedMessages = JSON.parse(localMessage);
@@ -175,12 +180,11 @@ export default function App() {
                 >
                   Tab 3
                 </button>
-              </div>
             </div>
-            <div className="messageBox">
+            <div className="messageBox-one">
               <p>
                 {localStorageMessage ||
-                  "Click on the tabs to see different messages using local storage and the useEffect hook"}
+                  "Click on the tabs to see different messages using the useEffect hook"}
               </p>
             </div>
           </div>
