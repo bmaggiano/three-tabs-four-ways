@@ -73,6 +73,7 @@ header {
 
 .state {
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.932);
   padding: 1rem;
@@ -80,6 +81,7 @@ header {
 
 .render {
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: #7DF9FF;
   padding: 1rem;
@@ -87,6 +89,7 @@ header {
 
 .useEffect {
   display: flex;
+  justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.932);
   padding: 1rem;
@@ -112,14 +115,17 @@ span {
 .section-container-one {
   margin: 5rem;
   border-radius: .5rem;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.178);
 }
 .section-container-two {
   margin: 5rem;
   border-radius: .5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.178);
 }
 .section-container-three {
   margin: 5rem;
   border-radius: .5rem;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.178);
 }
 
 .button-container {
@@ -233,9 +239,12 @@ button:hover {
     flex-direction: column;
   }
   .render {
-    flex-direction: column;
+    padding-top: 5rem;
+    flex-direction: column-reverse;
+    
   }
   .useEffect {
+    padding-top: 5rem;
     flex-direction: column;
   }
   .messageBox-one, .messageBox-two {
