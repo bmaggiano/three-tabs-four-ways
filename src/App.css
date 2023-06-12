@@ -65,9 +65,16 @@ header {
   font-style: italic;
   margin: 0;
   transition: 1s;
+  cursor: default;
 }
 
 .state:hover .desc-title-one{
+  color: yellow;
+  text-shadow: 1px 1px 1px white;
+  transition: 1s;
+}
+
+.useEffect:hover .desc-title-one{
   color: yellow;
   text-shadow: 1px 1px 1px white;
   transition: 1s;
@@ -86,17 +93,17 @@ header {
   font-style: italic;
   margin: 0;
   transition: 1s;
+  cursor: default;
 }
 
 .render .description {
   text-align: left;
 }
 
-.desc-title-two:hover {
+.render:hover .desc-title-two {
   color: yellow;
   transition: 1s;
   text-shadow: 1px 1px 1px black ;
-
 }
 
 .state {
