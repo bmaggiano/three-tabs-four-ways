@@ -5,10 +5,10 @@ body {
 
 header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 32px;
   letter-spacing: .5rem;
   background-color: rgba(0, 0, 0, 0.932);
   color: white;
@@ -18,7 +18,6 @@ header {
   position: relative;
   text-align: center;
   font-size: 70px;
-  font-weight: 600;
   color: white;
   background-clip: text;
   -webkit-background-clip: text;
@@ -27,6 +26,15 @@ header {
   ); */
   /* background-image: repeating-radial-gradient(circle closest-corner at 100px 100px, yellow, white 10%, #7DF9FF 20%); */
   /* text-shadow: 0px 0px 5px white, 0px 0px 5px #7DF9FF; */
+}
+
+.title-subtext {
+  font-size: 20px;
+  letter-spacing: .1rem;
+}
+
+.electric {
+  color: yellow;
 }
 
 .title .underline {
@@ -142,8 +150,7 @@ header {
   text-align: left;
 }
 
-.state:hover .hidden-one{
-opacity: 1;
+.description-container:hover .hidden-one{
 display: inline-block;
 }
 

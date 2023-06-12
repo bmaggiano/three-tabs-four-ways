@@ -46,11 +46,15 @@ export default function App() {
         <h1 className="title">
           Three Tabs Three Ways<span className="underline"></span>
         </h1>
+        <span className="title-subtext">
+          With vibrant popping colors that give <span className="electric">"electric"</span> vibes!
+        </span>
+        <br/>
       </header>
 
       <main>
         <section className="state">
-          <div>
+          <div className="description-container">
             <h2 className="desc-title-one">
               Active &nbsp;
               <LightningIcon />
