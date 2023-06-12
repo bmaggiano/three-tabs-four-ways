@@ -56,7 +56,6 @@ header {
 .desc-title-one {
   display: flex;
   align-items: center;
-  justify-content: center;
   text-align: center;
   color: #7DF9FF;
   text-shadow: 1px 1px 1px yellow ;
@@ -77,7 +76,7 @@ header {
 .desc-title-two {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   text-align: center;
   color: black;
   text-shadow: 1px 1px 1px yellow ;
@@ -87,6 +86,10 @@ header {
   font-style: italic;
   margin: 0;
   transition: 1s;
+}
+
+.render .description {
+  text-align: left;
 }
 
 .desc-title-two:hover {
@@ -121,8 +124,7 @@ header {
 }
 
 .description {
-  text-align: center;
-  margin: 1rem;
+  text-align: left;
   min-width: 20rem;
   max-width: 30rem;
 }
@@ -136,10 +138,6 @@ header {
 .state:hover .hidden-one{
 opacity: 1;
 display: inline-block;
-}
-
-.state:hover .description {
-  display: none;
 }
 
 span {

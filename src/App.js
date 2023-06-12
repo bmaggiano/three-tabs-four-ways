@@ -61,7 +61,6 @@ export default function App() {
                 message based off which button is active
               </span>
               <br />
-              <br />
             </p>
             <p>
               <span className="hidden-one">
