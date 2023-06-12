@@ -44,7 +44,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
   color: #7DF9FF;
   text-shadow: 1px 1px 1px yellow ;
@@ -53,13 +52,19 @@ header {
   letter-spacing: .5rem;
   font-style: italic;
   margin: 0;
+  transition: 1s;
+}
+
+.state:hover .desc-title-one{
+  color: yellow;
+  text-shadow: 1px 1px 1px white;
+  transition: 1s;
 }
 
 .desc-title-two {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
   color: black;
   text-shadow: 1px 1px 1px yellow ;
@@ -68,6 +73,14 @@ header {
   letter-spacing: .5rem;
   font-style: italic;
   margin: 0;
+  transition: 1s;
+}
+
+.desc-title-two:hover {
+  color: yellow;
+  transition: 1s;
+  text-shadow: 1px 1px 1px black ;
+
 }
 
 .state {
@@ -101,6 +114,21 @@ header {
   max-width: 30rem;
 }
 
+.hidden-one {
+  display: none;
+  color: green;
+  text-align: left;
+}
+
+.state:hover .hidden-one{
+opacity: 1;
+display: inline-block;
+}
+
+.state:hover .description {
+  display: none;
+}
+
 span {
   color: rgb(139, 139, 139);
   font-style: italic;
@@ -115,16 +143,36 @@ span {
   margin: 5rem;
   border-radius: .5rem;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.178);
+  transition: .5s;
 }
+
+.section-container-one:hover {
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.404);
+  transition: .5s;
+}
+
 .section-container-two {
   margin: 5rem;
   border-radius: .5rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.178);
+  transition: .5s;
 }
+
+.section-container-two:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.589);
+  transition: .5s;
+}
+
 .section-container-three {
   margin: 5rem;
   border-radius: .5rem;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.178);
+  transition: .5s;
+}
+
+.section-container-three:hover {
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.404);
+  transition: .5s;
 }
 
 .button-container {

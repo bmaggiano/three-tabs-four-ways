@@ -4,7 +4,7 @@ import MessageTwo from "./components/messageTwo";
 import MessageThree from "./components/messageThree";
 import LightningIcon from "./components/lightningIcon";
 import RenderIcon from "./components/renderIcon";
-import ReactIcon from "./components/reactIcon"
+import ReactIcon from "./components/reactIcon";
 import "./App.css";
 
 // add comments
@@ -43,7 +43,9 @@ export default function App() {
   return (
     <>
       <header>
-        <h1 className="title">Three Tabs Three Ways<span className="underline"></span></h1>
+        <h1 className="title">
+          Three Tabs Three Ways<span className="underline"></span>
+        </h1>
       </header>
 
       <main>
@@ -57,6 +59,36 @@ export default function App() {
               <span>
                 This method uses state to make a button active and show a
                 message based off which button is active
+              </span>
+              <br />
+              <br />
+            </p>
+            <p>
+              <span className="hidden-one">
+                // initialize state variable to 0
+                <br />
+                <span className="code-example">
+                  const [active, setActive] = useState(0);
+                </span>
+                <br />
+                // onClick, set state variable to index
+                <br />
+                <span class="code-example">
+                  const handleClick = (index) =&gt; {"{"}
+                  setActive(index)
+                  {"}"};
+                </span>
+                <br />
+                // set className = "active-button" if active index ===
+                handleClick(index)
+              <br />
+              <span className="code-example">
+                className={"{"}
+                active === 1 ? "active-button" : ""
+                {"}"}
+              </span>
+              <br/>
+              // style to your liking
               </span>
             </p>
           </div>
@@ -99,15 +131,15 @@ export default function App() {
         <section className="render">
           <div className="section-container-two">
             <div className="button-container">
-                <button className="left-button" onClick={showComponentOne}>
-                  Tab 1
-                </button>
-                <button className="middle-button" onClick={showComponentTwo}>
-                  Tab 2
-                </button>
-                <button className="right-button" onClick={showComponentThree}>
-                  Tab 3
-                </button>
+              <button className="left-button" onClick={showComponentOne}>
+                Tab 1
+              </button>
+              <button className="middle-button" onClick={showComponentTwo}>
+                Tab 2
+              </button>
+              <button className="right-button" onClick={showComponentThree}>
+                Tab 3
+              </button>
             </div>
             <div className="messageBox-two">
               {componentToShow === null && (
@@ -136,7 +168,7 @@ export default function App() {
         </section>
 
         <section className="useEffect">
-            <div>
+          <div>
             <h2 className="desc-title-one">
               useEffect &nbsp;
               <ReactIcon />
@@ -147,39 +179,39 @@ export default function App() {
                 in local storage & returns the array value on a user's click
               </span>
             </p>
-            </div>
+          </div>
           <div className="section-container-three">
             <div className="button-container">
-                <button
+              <button
                 className="left-button"
-                  onClick={() => {
-                    const localMessage = localStorage.getItem("messages");
-                    const storedMessages = JSON.parse(localMessage);
-                    setLocalStorageMessage(storedMessages[0]);
-                  }}
-                >
-                  Tab 1
-                </button>
-                <button
+                onClick={() => {
+                  const localMessage = localStorage.getItem("messages");
+                  const storedMessages = JSON.parse(localMessage);
+                  setLocalStorageMessage(storedMessages[0]);
+                }}
+              >
+                Tab 1
+              </button>
+              <button
                 className="middle-button"
-                  onClick={() => {
-                    const localMessage = localStorage.getItem("messages");
-                    const storedMessages = JSON.parse(localMessage);
-                    setLocalStorageMessage(storedMessages[1]);
-                  }}
-                >
-                  Tab 2
-                </button>
-                <button
+                onClick={() => {
+                  const localMessage = localStorage.getItem("messages");
+                  const storedMessages = JSON.parse(localMessage);
+                  setLocalStorageMessage(storedMessages[1]);
+                }}
+              >
+                Tab 2
+              </button>
+              <button
                 className="right-button"
-                  onClick={() => {
-                    const localMessage = localStorage.getItem("messages");
-                    const storedMessages = JSON.parse(localMessage);
-                    setLocalStorageMessage(storedMessages[2]);
-                  }}
-                >
-                  Tab 3
-                </button>
+                onClick={() => {
+                  const localMessage = localStorage.getItem("messages");
+                  const storedMessages = JSON.parse(localMessage);
+                  setLocalStorageMessage(storedMessages[2]);
+                }}
+              >
+                Tab 3
+              </button>
             </div>
             <div className="messageBox-one">
               <p>

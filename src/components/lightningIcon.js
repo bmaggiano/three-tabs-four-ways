@@ -4,7 +4,7 @@ import * as React from "react";
 export default function IconPytorchlightning(props) {
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 1 28 24"
       fill="yellow"
       height="1em"
       width="1em"
