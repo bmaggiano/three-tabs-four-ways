@@ -7,7 +7,7 @@ import RenderIcon from "./components/renderIcon";
 import ReactIcon from "./components/reactIcon"
 import "./App.css";
 
-//
+// add comments
 
 export default function App() {
   const [active, setActive] = useState(0);
