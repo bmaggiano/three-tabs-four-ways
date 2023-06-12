@@ -36,8 +36,21 @@ header {
   width: 100%;
   height: 1px; /* Adjust the value to control the thickness of the underline */
     background-image: linear-gradient(to left, yellow, white, #7DF9FF);
+}
 
+.state .hidden-one {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end;
+}
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
 .desc-title-one {

@@ -73,7 +73,7 @@ export default function App() {
                 <br />
                 // onClick, set state variable to index
                 <br />
-                <span class="code-example">
+                <span className="code-example">
                   const handleClick = (index) =&gt; {"{"}
                   setActive(index)
                   {"}"};
@@ -92,6 +92,8 @@ export default function App() {
               </span>
             </p>
           </div>
+
+
           <div className="section-container-one">
             <div className="button-container">
               <button
