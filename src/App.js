@@ -55,7 +55,7 @@ export default function App() {
       <main>
         <section className="state">
           <div className="description-container-one">
-            <h2 className="desc-title-one">
+            <h2 className="description-title-dark">
               Active &nbsp;
               <LightningIcon />
             </h2>
@@ -97,7 +97,7 @@ export default function App() {
           </div>
 
 
-          <div className="section-container-one">
+          <div className="tabs-container-one">
             <div className="button-container">
               <button
                 className={
@@ -124,7 +124,7 @@ export default function App() {
                 Tab 3
               </button>
             </div>
-            <div className="messageBox-one">
+            <div className="message-box message-box-dark">
               <p>
                 {messages[active - 1] ||
                   "Click on the tabs to see different messages using the active method"}
@@ -134,7 +134,7 @@ export default function App() {
         </section>
 
         <section className="render">
-          <div className="section-container-two">
+          <div className="tabs-container-two">
             <div className="button-container">
               <button className="left-button" onClick={showComponentOne}>
                 Tab 1
@@ -146,7 +146,7 @@ export default function App() {
                 Tab 3
               </button>
             </div>
-            <div className="messageBox-two">
+            <div className="message-box message-box-light">
               {componentToShow === null && (
                 <p>
                   Click on the tabs to see different messages using component
@@ -159,7 +159,7 @@ export default function App() {
             </div>
           </div>
           <div className="description-container-two">
-            <h2 className="desc-title-two">
+            <h2 className="description-title-light">
               Render &nbsp;
               <RenderIcon />
             </h2>
@@ -201,7 +201,7 @@ export default function App() {
 
         <section className="useEffect">
           <div className="description-container-three">
-            <h2 className="desc-title-one">
+            <h2 className="description-title-dark">
               useEffect &nbsp;
               <ReactIcon />
             </h2>
@@ -243,7 +243,7 @@ export default function App() {
               </span>
             </p>
           </div>
-          <div className="section-container-three">
+          <div className="tabs-container-three">
             <div className="button-container">
               <button
                 className="left-button"
@@ -276,7 +276,7 @@ export default function App() {
                 Tab 3
               </button>
             </div>
-            <div className="messageBox-one">
+            <div className="message-box message-box-dark">
               <p>
                 {localStorageMessage ||
                   "Click on the tabs to see different messages using the useEffect hook"}

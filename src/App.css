@@ -1,3 +1,4 @@
+/* creating variables for commonly used colors */
 :root {
   --main-blue: #7DF9FF;
   --main-white: white;
@@ -49,6 +50,9 @@ header {
 }
 
 .hidden {
+  color: green;
+  text-align: left;
+  display: none;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -63,7 +67,8 @@ header {
   to { width: 100% }
 }
 
-.desc-title-one {
+/* This handles logic for "Active" and "UseEffect" text  */
+.description-title-dark {
   display: flex;
   align-items: center;
   text-align: center;
@@ -78,19 +83,8 @@ header {
   cursor: default;
 }
 
-.state:hover .desc-title-one{
-  color: var(--main-yellow);
-  text-shadow: .063rem .063rem .063rem var(--main-blue);
-  transition: 1s;
-}
-
-.useEffect:hover .desc-title-one{
-  color: var(--main-yellow);
-  text-shadow: .063rem .063rem .063rem var(--main-white);
-  transition: 1s;
-}
-
-.desc-title-two {
+/* This handles logic for "Render" text */
+.description-title-light {
   display: flex;
   align-items: center;
   justify-content: left;
@@ -106,16 +100,7 @@ header {
   cursor: default;
 }
 
-.render .description {
-  text-align: left;
-}
-
-.render:hover .desc-title-two {
-  color: var(--main-yellow);
-  transition: 1s;
-  text-shadow: .063rem .063rem .063rem black ;
-}
-
+/* state, render, and useEffect are the three sections of the page */
 .state {
   display: flex;
   justify-content: center;
@@ -140,18 +125,33 @@ header {
   padding: 1rem;
 }
 
+
+.state:hover .description-title-dark{
+  color: var(--main-yellow);
+  text-shadow: .063rem .063rem .063rem var(--main-blue);
+  transition: 1s;
+}
+
+.render:hover .description-title-light {
+  color: var(--main-yellow);
+  transition: 1s;
+  text-shadow: .063rem .063rem .063rem black ;
+}
+
+.useEffect:hover .description-title-dark{
+  color: var(--main-yellow);
+  text-shadow: .063rem .063rem .063rem var(--main-white);
+  transition: 1s;
+}
+
+/* text that explains what method we're using */
 .description {
   text-align: left;
   min-width: 20rem;
   max-width: 30rem;
 }
 
-.hidden {
-  display: none;
-  color: green;
-  text-align: left;
-}
-
+/* description-container-one...two...three have to be separated to handle different hidden methods */
 .description-container-one:hover .hidden{
 display: inline-block;
 }
@@ -174,42 +174,44 @@ span {
   color: var(--dark-span);
 }
 
-.section-container-one {
+/* tabs-containers can't be different because each hover is different */
+.tabs-container-one {
   margin: 5rem;
   border-radius: .5rem;
   box-shadow: 0 0 .625rem rgba(255, 255, 255, 0.178);
   transition: .5s;
 }
 
-.section-container-one:hover {
+.tabs-container-one:hover {
   box-shadow: 0 0 1.563rem rgba(255, 255, 255, 0.404);
   transition: .5s;
 }
 
-.section-container-two {
+.tabs-container-two {
   margin: 5rem;
   border-radius: .5rem;
   box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.178);
   transition: .5s;
 }
 
-.section-container-two:hover {
+.tabs-container-two:hover {
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.589);
   transition: .5s;
 }
 
-.section-container-three {
+.tabs-container-three {
   margin: 5rem;
   border-radius: .5rem;
   box-shadow: 0 0 .625rem rgba(255, 255, 255, 0.178);
   transition: .5s;
 }
 
-.section-container-three:hover {
+.tabs-container-three:hover {
   box-shadow: 0 0 1.25rem rgba(255, 255, 255, 0.404);
   transition: .5s;
 }
 
+/* container for buttons to give them that uniform look */
 .button-container {
   display: flex;
   flex: 1;
@@ -217,7 +219,8 @@ span {
   justify-content: space-evenly;
 }
 
-.section-container-one button {
+/* buttons all have unique looks from section to section and different styles */
+.tabs-container-one button {
   flex: 1; 
   border: 0;
   padding: 0.4rem;
@@ -229,7 +232,7 @@ span {
   letter-spacing: .1rem;
 }
 
-.section-container-two button {
+.tabs-container-two button {
   flex: 1; 
   border: 0;
   padding: 0.4rem;
@@ -241,7 +244,7 @@ span {
   letter-spacing: .1rem;
 }
 
-.section-container-three button {
+.tabs-container-three button {
   flex: 1; 
   border: 0;
   padding: 0.4rem;
@@ -253,6 +256,7 @@ span {
   letter-spacing: .1rem;
 }
 
+/* style buttons to keep consistent border radius since buttons are above message box */
 .left-button {
   border-radius: .5rem 0 0 0;
 }
@@ -271,19 +275,18 @@ button:hover {
   background-color: #37c1c9;
 }
 
-.section-container-two button:hover {
+.tabs-container-two button:hover {
   font-size: .875rem;
   transition: .2s;
   background-color: rgb(199, 199, 0);
 }
 
-.section-container-one .active-button {
+.tabs-container-one .active-button {
   background-color: var(--main-yellow) ;
   color: black;
 }
 
-.messageBox-one {
-  background-color: rgba(255, 255, 255, .15);  
+.message-box {
   backdrop-filter: blur(.313rem); 
   display: flex;
   min-width: 25rem;
@@ -299,21 +302,12 @@ button:hover {
   font-size: 1.625rem;
 }
 
-.messageBox-two {
+.message-box-dark {
+  background-color: rgba(255, 255, 255, .15);  
+}
+
+.message-box-light {
   background-color: rgba(0, 0, 0, 0.397);  
-  backdrop-filter: blur(.313rem); 
-  display: flex;
-  min-width: 25rem;
-  max-width: 25rem;
-  min-height: 8rem;
-  flex-direction: column;
-  justify-content: space-around;
-  border-radius: 0 0 .5rem .5rem;
-  text-align: center;
-  color: var(--main-white);
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: .1rem;
-  font-size: 1.625rem;
 }
 
 @media (max-width: 650px) {
@@ -321,15 +315,38 @@ button:hover {
     flex-direction: column;
   }
   .render {
-    padding-top: 5rem;
+    padding-top: 4rem;
     flex-direction: column-reverse;
-    
   }
   .useEffect {
-    padding-top: 5rem;
+    padding-top: 4rem;
     flex-direction: column;
   }
-  .messageBox-one, .messageBox-two {
+  .description-title-dark {
+    justify-content: center;
+  }
+  .description-title-light {
+    justify-content: center;
+  }
+  .description {
+    text-align: center;
+  }
+  .message-box {
     min-width: 20rem;
+  }
+  .hidden {
+    white-space: normal;
+    text-align: center;
+    animation: none;
+  }
+  .title {
+    padding: 1rem;
+    font-size: 3rem;
+  }
+  .title-subtext {
+    padding: 1rem;
+  }
+  .tabs-container-one, .tabs-container-two, .tabs-container-three {
+    margin: 1.5rem;
   }
 }
