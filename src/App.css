@@ -4,7 +4,7 @@
   --main-yellow: yellow;
   --dark-background: rgba(0, 0, 0, 0.932);
   --light-span: rgb(139, 139, 139);
-  --dark-span: ;
+  --dark-span: rgb(99, 99, 99);
 }
 
 body {
@@ -165,7 +165,7 @@ span {
 }
 
 .span-dark {
-  color: rgb(99, 99, 99);
+  color: var(--dark-span);
 }
 
 .section-container-one {
