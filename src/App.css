@@ -1,6 +1,6 @@
 /* creating variables for commonly used colors */
 :root {
-  --main-blue: #7DF9FF;
+  --main-blue: #7df9ff;
   --main-white: white;
   --main-yellow: yellow;
   --dark-background: rgba(0, 0, 0, 0.932);
@@ -18,8 +18,8 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: .5rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.5rem;
   background-color: var(--dark-background);
   color: var(--main-white);
 }
@@ -33,7 +33,7 @@ header {
 
 .title-subtext {
   font-size: 1.1rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
 .electric {
@@ -42,11 +42,16 @@ header {
 
 .title .underline {
   position: absolute;
-  bottom: -.2rem;
+  bottom: -0.2rem;
   left: 0;
   width: 100%;
-  height: .1rem; /* Adjust the value to control the thickness of the underline */
-    background-image: linear-gradient(to left, var(--main-yellow), var(--main-white), var(--main-blue));
+  height: 0.1rem; /* Adjust the value to control the thickness of the underline */
+  background-image: linear-gradient(
+    to left,
+    var(--main-yellow),
+    var(--main-white),
+    var(--main-blue)
+  );
 }
 
 .hidden {
@@ -56,15 +61,17 @@ header {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: 
-    typing 2.5s steps(40, end),
-    blink-caret .75s step-end;
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* This handles logic for "Active" and "UseEffect" text  */
@@ -73,10 +80,10 @@ header {
   align-items: center;
   text-align: center;
   color: var(--main-blue);
-  text-shadow: .063rem .063rem .063rem var(--main-yellow) ;
-  font-family: 'Bebas Neue', sans-serif;
+  text-shadow: 0.063rem 0.063rem 0.063rem var(--main-yellow);
+  font-family: "Bebas Neue", sans-serif;
   font-size: 3.5rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   font-style: italic;
   margin: 0;
   transition: 1s;
@@ -90,10 +97,10 @@ header {
   justify-content: left;
   text-align: center;
   color: black;
-  text-shadow: .063rem .063rem .063rem var(--main-yellow) ;
-  font-family: 'Bebas Neue', sans-serif;
+  text-shadow: 0.063rem 0.063rem 0.063rem var(--main-yellow);
+  font-family: "Bebas Neue", sans-serif;
   font-size: 3.5rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
   font-style: italic;
   margin: 0;
   transition: 1s;
@@ -125,22 +132,21 @@ header {
   padding: 1rem;
 }
 
-
-.state:hover .description-title-dark{
+.state:hover .description-title-dark {
   color: var(--main-yellow);
-  text-shadow: .063rem .063rem .063rem var(--main-blue);
+  text-shadow: 0.063rem 0.063rem 0.063rem var(--main-blue);
   transition: 1s;
 }
 
 .render:hover .description-title-light {
   color: var(--main-yellow);
   transition: 1s;
-  text-shadow: .063rem .063rem .063rem black ;
+  text-shadow: 0.063rem 0.063rem 0.063rem black;
 }
 
-.useEffect:hover .description-title-dark{
+.useEffect:hover .description-title-dark {
   color: var(--main-yellow);
-  text-shadow: .063rem .063rem .063rem var(--main-white);
+  text-shadow: 0.063rem 0.063rem 0.063rem var(--main-white);
   transition: 1s;
 }
 
@@ -152,16 +158,16 @@ header {
 }
 
 /* description-container-one...two...three have to be separated to handle different hidden methods */
-.description-container-one:hover .hidden{
-display: inline-block;
+.description-container-one:hover .hidden {
+  display: inline-block;
 }
 
-.description-container-two:hover .hidden{
-display: inline-block;
+.description-container-two:hover .hidden {
+  display: inline-block;
 }
 
-.description-container-three:hover .hidden{
-display: inline-block;
+.description-container-three:hover .hidden {
+  display: inline-block;
 }
 
 span {
@@ -177,88 +183,88 @@ span {
 /* tabs-containers can't be different because each hover is different */
 .tabs-container-one {
   margin: 5rem;
-  border-radius: .5rem;
-  box-shadow: 0 0 .625rem rgba(255, 255, 255, 0.178);
-  transition: .5s;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.178);
+  transition: 0.5s;
 }
 
 .tabs-container-one:hover {
   box-shadow: 0 0 1.563rem rgba(255, 255, 255, 0.404);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .tabs-container-two {
   margin: 5rem;
-  border-radius: .5rem;
-  box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.178);
-  transition: .5s;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.178);
+  transition: 0.5s;
 }
 
 .tabs-container-two:hover {
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.589);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .tabs-container-three {
   margin: 5rem;
-  border-radius: .5rem;
-  box-shadow: 0 0 .625rem rgba(255, 255, 255, 0.178);
-  transition: .5s;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.178);
+  transition: 0.5s;
 }
 
 .tabs-container-three:hover {
   box-shadow: 0 0 1.25rem rgba(255, 255, 255, 0.404);
-  transition: .5s;
+  transition: 0.5s;
 }
 
 /* container for buttons to give them that uniform look */
 .button-container {
   display: flex;
   flex: 1;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   justify-content: space-evenly;
 }
 
 /* buttons all have unique looks from section to section and different styles */
 .tabs-container-one button {
-  flex: 1; 
+  flex: 1;
   border: 0;
   padding: 0.4rem;
   cursor: pointer;
   font-size: medium;
   color: black;
   background-color: var(--main-blue);
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: .1rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .tabs-container-two button {
-  flex: 1; 
+  flex: 1;
   border: 0;
   padding: 0.4rem;
   cursor: pointer;
   font-size: medium;
   color: black;
   background-color: var(--main-yellow);
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: .1rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 .tabs-container-three button {
-  flex: 1; 
+  flex: 1;
   border: 0;
   padding: 0.4rem;
   cursor: pointer;
   font-size: medium;
   color: black;
   background-color: var(--main-blue);
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: .1rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.1rem;
 }
 
 /* style buttons to keep consistent border radius since buttons are above message box */
 .left-button {
-  border-radius: .5rem 0 0 0;
+  border-radius: 0.5rem 0 0 0;
 }
 
 .middle-button {
@@ -266,48 +272,48 @@ span {
 }
 
 .right-button {
-  border-radius: 0 .5rem 0 0;
+  border-radius: 0 0.5rem 0 0;
 }
 
 button:hover {
-  font-size: .875rem;
-  transition: .2s;
+  font-size: 0.875rem;
+  transition: 0.2s;
   background-color: #37c1c9;
 }
 
 .tabs-container-two button:hover {
-  font-size: .875rem;
-  transition: .2s;
+  font-size: 0.875rem;
+  transition: 0.2s;
   background-color: rgb(199, 199, 0);
 }
 
 .tabs-container-one .active-button {
-  background-color: var(--main-yellow) ;
+  background-color: var(--main-yellow);
   color: black;
 }
 
 .message-box {
-  backdrop-filter: blur(.313rem); 
+  backdrop-filter: blur(0.313rem);
   display: flex;
   min-width: 25rem;
   max-width: 25rem;
   min-height: 8rem;
   flex-direction: column;
   justify-content: space-around;
-  border-radius: 0 0 .5rem .5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   text-align: center;
   color: var(--main-white);
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: .1rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.1rem;
   font-size: 1.625rem;
 }
 
 .message-box-dark {
-  background-color: rgba(255, 255, 255, .15);  
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .message-box-light {
-  background-color: rgba(0, 0, 0, 0.397);  
+  background-color: rgba(0, 0, 0, 0.397);
 }
 
 @media (max-width: 650px) {
@@ -346,7 +352,9 @@ button:hover {
   .title-subtext {
     padding: 1rem;
   }
-  .tabs-container-one, .tabs-container-two, .tabs-container-three {
+  .tabs-container-one,
+  .tabs-container-two,
+  .tabs-container-three {
     margin: 1.5rem;
   }
 }

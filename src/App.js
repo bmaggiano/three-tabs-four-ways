@@ -7,8 +7,6 @@ import RenderIcon from "./components/renderIcon";
 import ReactIcon from "./components/reactIcon";
 import "./App.css";
 
-// add comments
-
 export default function App() {
   const [active, setActive] = useState(0);
   const [componentToShow, setComponentToShow] = useState(null);
@@ -20,14 +18,19 @@ export default function App() {
     "This is the message for tab 3",
   ];
 
+// this will set a value of "messages" to local storage after the component mounts
+// this messages value will contain the messages array in string format
   useEffect(() => {
     localStorage.setItem("messages", JSON.stringify(messages));
   });
 
+  // this is our function for setting the index value for our "active" variable
   const handleClick = (index) => {
     setActive(index);
   };
 
+  // this is our functions for rendering a component based on which numeric string value we set 
+  // componentToShow to
   const showComponentOne = () => {
     setComponentToShow("one");
   };
@@ -47,9 +50,10 @@ export default function App() {
           Three Tabs Three Ways<span className="underline"></span>
         </h1>
         <span className="title-subtext">
-          With vibrant popping colors that give <span className="electric">"electric"</span> vibes!
+          With vibrant popping colors that give{" "}
+          <span className="electric">"electric"</span> vibes!
         </span>
-        <br/>
+        <br />
       </header>
 
       <main>
@@ -84,18 +88,17 @@ export default function App() {
                 <br />
                 // set className = "active-button" if active index ===
                 handleClick(index)
-              <br />
-              <span className="code-example">
-                className={"{"}
-                active === 1 ? "active-button" : ""
-                {"}"}
-              </span>
-              <br/>
-              // style to your liking
+                <br />
+                <span className="code-example">
+                  className={"{"}
+                  active === 1 ? "active-button" : ""
+                  {"}"}
+                </span>
+                <br />
+                // style to your liking
               </span>
             </p>
           </div>
-
 
           <div className="tabs-container-one">
             <div className="button-container">
@@ -171,11 +174,12 @@ export default function App() {
             </p>
             <p>
               <span className="hidden">
-                // initialize componentToShow variable to null & import components
+                // initialize componentToShow variable to null & import
+                components
                 <br />
                 <span className="code-example span-dark">
-                import MessageOne from "./components/messageOne";
-                <br/>
+                  import MessageOne from "./components/messageOne";
+                  <br />
                   const [componentToShow, setComponentToShow] = useState(null);
                 </span>
                 <br />
@@ -188,12 +192,12 @@ export default function App() {
                 </span>
                 <br />
                 // render component based on value of componentToShow
-              <br />
-              <span className="code-example span-dark">
-                {"{"}componentToShow === "one" && &lt;MessageOne/&gt; {"}"}                
-              </span>
-              <br/>
-              // style to your liking
+                <br />
+                <span className="code-example span-dark">
+                  {"{"}componentToShow === "one" && &lt;MessageOne/&gt; {"}"}
+                </span>
+                <br />
+                // style to your liking
               </span>
             </p>
           </div>
@@ -216,30 +220,37 @@ export default function App() {
                 // create messages array & localStorageMessage variable
                 <br />
                 <span className="code-example">
-                const [localStorageMessage, setLocalStorageMessage] = useState("");
-<br/>
+                  const [localStorageMessage, setLocalStorageMessage] =
+                  useState("");
+                  <br />
                   const [messages] = ["This is the message for tab 1", ...];
                 </span>
                 <br />
                 // useEffect hook to set localStorage with messages array
                 <br />
                 <span className="code-example">
-                  useEffect = () =&gt; {"{"}<br/>
+                  useEffect = () =&gt; {"{"}
+                  <br />
                   localStorage.setItem("messages", JSON.stringify(messages));
                   {"}"};
                 </span>
                 <br />
                 // onClick, retrieve message from localStorage and set value
-              <br />
-              <span className="code-example">
-                onClick={"{"}() =&gt; {"{"}<br/>
-                const localMessage = localStorage.getItem("messages");<br/>
-                const storedMessages = JSON.parse(localMessage);<br/>
-                setLocalStorageMessage(storedMessages[0]);<br/>
-                {"}"}{"}"}
-              </span>
-              <br/>
-              // style to your liking
+                <br />
+                <span className="code-example">
+                  onClick={"{"}() =&gt; {"{"}
+                  <br />
+                  const localMessage = localStorage.getItem("messages");
+                  <br />
+                  const storedMessages = JSON.parse(localMessage);
+                  <br />
+                  setLocalStorageMessage(storedMessages[0]);
+                  <br />
+                  {"}"}
+                  {"}"}
+                </span>
+                <br />
+                // style to your liking
               </span>
             </p>
           </div>
@@ -247,6 +258,10 @@ export default function App() {
             <div className="button-container">
               <button
                 className="left-button"
+                // These functions retrieve the messages value from local storage
+                // then parses the string that we're retrieving into a workable array
+                // the sets the localStorageMessage value to the element of the parsed data that we're
+                // looking to display
                 onClick={() => {
                   const localMessage = localStorage.getItem("messages");
                   const storedMessages = JSON.parse(localMessage);
