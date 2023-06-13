@@ -3,7 +3,7 @@
   --main-white: white;
   --main-yellow: yellow;
   --dark-background: rgba(0, 0, 0, 0.932);
-  --light-span: ;
+  --light-span: rgb(139, 139, 139);
   --dark-span: ;
 }
 
@@ -159,7 +159,7 @@ display: inline-block;
 }
 
 span {
-  color: rgb(139, 139, 139);
+  color: var(--light-span);
   font-style: italic;
   text-align: center;
 }
