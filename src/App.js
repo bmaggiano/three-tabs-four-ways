@@ -67,7 +67,7 @@ export default function App() {
               <br />
             </p>
             <p>
-              <span className="hidden-one">
+              <span className="hidden">
                 // initialize state variable to 0
                 <br />
                 <span className="code-example">
@@ -170,7 +170,7 @@ export default function App() {
               </span>
             </p>
             <p>
-              <span className="hidden-two">
+              <span className="hidden">
                 // initialize componentToShow variable to null & import components
                 <br />
                 <span className="code-example span-dark">
@@ -200,7 +200,7 @@ export default function App() {
         </section>
 
         <section className="useEffect">
-          <div>
+          <div className="description-container-three">
             <h2 className="desc-title-one">
               useEffect &nbsp;
               <ReactIcon />
@@ -209,6 +209,34 @@ export default function App() {
               <span>
                 This method uses the useEffect hook to set an array of messages
                 in local storage & returns the array value on a user's click
+              </span>
+            </p>
+            <p>
+              <span className="hidden">
+                // initialize state variable to 0
+                <br />
+                <span className="code-example">
+                  const [active, setActive] = useState(0);
+                </span>
+                <br />
+                // onClick, set state variable to index
+                <br />
+                <span className="code-example">
+                  const handleClick = (index) =&gt; {"{"}
+                  setActive(index)
+                  {"}"};
+                </span>
+                <br />
+                // set className = "active-button" if active index ===
+                handleClick(index)
+              <br />
+              <span className="code-example">
+                className={"{"}
+                active === 1 ? "active-button" : ""
+                {"}"}
+              </span>
+              <br/>
+              // style to your liking
               </span>
             </p>
           </div>

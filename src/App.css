@@ -48,16 +48,7 @@ header {
     background-image: linear-gradient(to left, var(--main-yellow), var(--main-white), var(--main-blue));
 }
 
-.state .hidden-one {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: 
-    typing 2.5s steps(40, end),
-    blink-caret .75s step-end;
-}
-
-.render .hidden-two {
+.hidden {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -155,23 +146,21 @@ header {
   max-width: 30rem;
 }
 
-.hidden-one {
+.hidden {
   display: none;
   color: green;
   text-align: left;
 }
 
-.hidden-two {
-  display: none;
-  color: green;
-  text-align: left;
-}
-
-.description-container-one:hover .hidden-one{
+.description-container-one:hover .hidden{
 display: inline-block;
 }
 
-.description-container-two:hover .hidden-two{
+.description-container-two:hover .hidden{
+display: inline-block;
+}
+
+.description-container-three:hover .hidden{
 display: inline-block;
 }
 
