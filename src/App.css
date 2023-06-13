@@ -1,3 +1,10 @@
+:root {
+  --main-blue: #7DF9FF;
+  --main-white: white;
+  --main-yellow: yellow;
+
+}
+
 body {
   align-items: center;
   height: 100vh;
