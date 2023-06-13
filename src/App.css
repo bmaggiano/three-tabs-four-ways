@@ -2,8 +2,9 @@
   --main-blue: #7DF9FF;
   --main-white: white;
   --main-yellow: yellow;
-  --span-light: ;
-  --span-dark: ;
+  --dark-background: rgba(0, 0, 0, 0.932);
+  --light-span: ;
+  --dark-span: ;
 }
 
 body {
@@ -18,7 +19,7 @@ header {
   justify-content: center;
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: .5rem;
-  background-color: rgba(0, 0, 0, 0.932);
+  background-color: var(--dark-background);
   color: var(--main-white);
 }
 
@@ -29,11 +30,6 @@ header {
   color: var(--main-white);
   background-clip: text;
   -webkit-background-clip: text;
-  /* background-image: conic-gradient(
-    var(--main-yellow) 0%, var(--main-yellow) 33%, var(--main-white) 33%, var(--main-white) 66%, var(--main-blue) 66%, var(--main-blue) 99%
-  ); */
-  /* background-image: repeating-radial-gradient(circle closest-corner at 100px 100px, var(--main-yellow), var(--main-white) 10%, var(--main-blue) 20%); */
-  /* text-shadow: 0px 0px 5px var(--main-white), 0px 0px 5px var(--main-blue); */
 }
 
 .title-subtext {
@@ -126,7 +122,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.932);
+  background-color: var(--dark-background);
   padding: 1rem;
 }
 
@@ -142,7 +138,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.932);
+  background-color: var(--dark-background);
   padding: 1rem;
 }
 
