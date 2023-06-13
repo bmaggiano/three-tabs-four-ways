@@ -4,7 +4,7 @@
   --main-yellow: yellow;
   --dark-background: rgba(0, 0, 0, 0.932);
   --light-span: rgb(139, 139, 139);
-  --dark-span: rgb(99, 99, 99);
+  --dark-span: rgb(49, 49, 49);
 }
 
 body {
@@ -49,6 +49,15 @@ header {
 }
 
 .state .hidden-one {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end;
+}
+
+.render .hidden-two {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -152,7 +161,17 @@ header {
   text-align: left;
 }
 
-.description-container:hover .hidden-one{
+.hidden-two {
+  display: none;
+  color: green;
+  text-align: left;
+}
+
+.description-container-one:hover .hidden-one{
+display: inline-block;
+}
+
+.description-container-two:hover .hidden-two{
 display: inline-block;
 }
 

@@ -54,7 +54,7 @@ export default function App() {
 
       <main>
         <section className="state">
-          <div className="description-container">
+          <div className="description-container-one">
             <h2 className="desc-title-one">
               Active &nbsp;
               <LightningIcon />
@@ -158,7 +158,7 @@ export default function App() {
               {componentToShow === "three" && <MessageThree />}
             </div>
           </div>
-          <div>
+          <div className="description-container-two">
             <h2 className="desc-title-two">
               Render &nbsp;
               <RenderIcon />
@@ -167,6 +167,33 @@ export default function App() {
               <span className="span-dark">
                 This method uses component rendering based off of state
                 switching from null to a specificed value
+              </span>
+            </p>
+            <p>
+              <span className="hidden-two">
+                // initialize componentToShow variable to null & import components
+                <br />
+                <span className="code-example span-dark">
+                import MessageOne from "./components/messageOne";
+                <br/>
+                  const [componentToShow, setComponentToShow] = useState(null);
+                </span>
+                <br />
+                // onClick, set component variable to string numeric value
+                <br />
+                <span className="code-example span-dark">
+                  const showComponentOne = () =&gt; {"{"}
+                  setComponentToShow("one")
+                  {"}"};
+                </span>
+                <br />
+                // render component based on value of componentToShow
+              <br />
+              <span className="code-example span-dark">
+                {"{"}componentToShow === "one" && &lt;MessageOne/&gt; {"}"}                
+              </span>
+              <br/>
+              // style to your liking
               </span>
             </p>
           </div>
