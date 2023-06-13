@@ -213,27 +213,30 @@ export default function App() {
             </p>
             <p>
               <span className="hidden">
-                // initialize state variable to 0
+                // create messages array & localStorageMessage variable
                 <br />
                 <span className="code-example">
-                  const [active, setActive] = useState(0);
+                const [localStorageMessage, setLocalStorageMessage] = useState("");
+<br/>
+                  const [messages] = ["This is the message for tab 1", ...];
                 </span>
                 <br />
-                // onClick, set state variable to index
+                // useEffect hook to set localStorage with messages array
                 <br />
                 <span className="code-example">
-                  const handleClick = (index) =&gt; {"{"}
-                  setActive(index)
+                  useEffect = () =&gt; {"{"}<br/>
+                  localStorage.setItem("messages", JSON.stringify(messages));
                   {"}"};
                 </span>
                 <br />
-                // set className = "active-button" if active index ===
-                handleClick(index)
+                // onClick, retrieve message from localStorage and set value
               <br />
               <span className="code-example">
-                className={"{"}
-                active === 1 ? "active-button" : ""
-                {"}"}
+                onClick={"{"}() =&gt; {"{"}<br/>
+                const localMessage = localStorage.getItem("messages");<br/>
+                const storedMessages = JSON.parse(localMessage);<br/>
+                setLocalStorageMessage(storedMessages[0]);<br/>
+                {"}"}{"}"}
               </span>
               <br/>
               // style to your liking
