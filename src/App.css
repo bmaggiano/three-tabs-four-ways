@@ -8,10 +8,6 @@
   --dark-span: rgb(49, 49, 49);
 }
 
-.readMeImage {
-  height: 1rem;
-}
-
 body {
   align-items: center;
   height: 100vh;
