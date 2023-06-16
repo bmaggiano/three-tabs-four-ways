@@ -50,13 +50,12 @@ export default function ActiveSection() {
                 {"}"};
               </span>
               <br />
-              {"//"} set className = "active-button" if active index ===
-              handleClick(index)
+              {"//"} display message based of the current active index
               <br />
               <span className="code-example">
-                className={"{"}
-                active === 1 ? "active-button" : ""
-                {"}"}
+                &lt;p&gt;{"{"}
+                messages[active-1]
+                {"}"}&lt;/p&gt;
               </span>
               <br />
               {"//"} style to your liking
