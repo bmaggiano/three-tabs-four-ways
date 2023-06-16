@@ -295,8 +295,7 @@ button:hover {
 .message-box {
   backdrop-filter: blur(0.313rem);
   display: flex;
-  min-width: 25rem;
-  max-width: 25rem;
+  width: 25rem;
   min-height: 8rem;
   flex-direction: column;
   justify-content: space-around;

@@ -262,6 +262,8 @@ export default function App() {
                 // then parses the string that we're retrieving into a workable array
                 // the sets the localStorageMessage value to the element of the parsed data that we're
                 // looking to display
+
+                // add to function up top
                 onClick={() => {
                   const localMessage = localStorage.getItem("messages");
                   const storedMessages = JSON.parse(localMessage);
