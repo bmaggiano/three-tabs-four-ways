@@ -24,6 +24,6 @@ Three Tabs Three Ways has a cool hidden feature That might be an Easter Egg unle
 
 ![features involving hidden text](./public//features.PNG)
 
-
-
 ## Education
+
+This really gave me a deeper understanding of the capabilities of using state with different index values to dynamically set data. Also it's always great to get a refresher on CSS when you're used to using CSS frameworks. One of the smallest things I learned with this project is how to make it look like text is being typed into a page with the typing animation feature. I look forward to creating more side projects like this in the future!
