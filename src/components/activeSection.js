@@ -36,13 +36,13 @@ export default function ActiveSection() {
           {/* this code will be hidden until user hovers over description-container-one */}
           <p>
             <span className="hidden">
-              // initialize state variable to 0
+              {"//"} initialize state variable to 0
               <br />
               <span className="code-example">
                 const [active, setActive] = useState(0);
               </span>
               <br />
-              // onClick, set state variable to index
+              {"//"} onClick, set state variable to index
               <br />
               <span className="code-example">
                 const handleClick = (index) =&gt; {"{"}
@@ -50,7 +50,7 @@ export default function ActiveSection() {
                 {"}"};
               </span>
               <br />
-              // set className = "active-button" if active index ===
+              {"//"} set className = "active-button" if active index ===
               handleClick(index)
               <br />
               <span className="code-example">
@@ -59,7 +59,7 @@ export default function ActiveSection() {
                 {"}"}
               </span>
               <br />
-              // style to your liking
+              {"//"} style to your liking
             </span>
           </p>
         </div>

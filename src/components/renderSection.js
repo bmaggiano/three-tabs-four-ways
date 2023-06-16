@@ -88,7 +88,7 @@ export default function RenderSection() {
           {/* This section will be hidden until user hovers over description-container-two */}
           <p>
             <span className="hidden">
-              // initialize componentToShow variable to null & import components
+              {"//"} initialize componentToShow variable to null & import components
               <br />
               <span className="code-example span-dark">
                 import MessageOne from "./components/messageOne";
@@ -96,7 +96,7 @@ export default function RenderSection() {
                 const [componentToShow, setComponentToShow] = useState(null);
               </span>
               <br />
-              // onClick, set component variable to string numeric value
+              {"//"} onClick, set component variable to string numeric value
               <br />
               <span className="code-example span-dark">
                 const showComponentOne = () =&gt; {"{"}
@@ -104,13 +104,13 @@ export default function RenderSection() {
                 {"}"};
               </span>
               <br />
-              // render component based on value of componentToShow
+              {"//"} render component based on value of componentToShow
               <br />
               <span className="code-example span-dark">
                 {"{"}componentToShow === "one" && &lt;MessageOne/&gt; {"}"}
               </span>
               <br />
-              // style to your liking
+              {"//"} style to your liking
             </span>
           </p>
         </div>
