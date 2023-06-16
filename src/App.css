@@ -356,4 +356,15 @@ button:hover {
   .tabs-container-three {
     margin: 1.5rem;
   }
+  .description-container-one:hover .hidden {
+    display: block;
+  }
+  
+  .description-container-two:hover .hidden {
+    display: block;
+  }
+  
+  .description-container-three:hover .hidden {
+    display: block;
+  }
 }

@@ -20,4 +20,10 @@ This app demonstrates some of the power and versatility of React js. It aims to 
 
 ## Features
 
+Three Tabs Three Ways has a cool hidden feature That might be an Easter Egg unless you're reading this. When a user hovers over the section that has the name and description of the method we're using to render, they can see some comments and code begin to type: 
+
+![features involving hidden text](./public//features.PNG)
+
+
+
 ## Education
