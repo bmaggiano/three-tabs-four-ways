@@ -1,3 +1,3 @@
 # Three Tabs Three Ways
 
-<image src="./public/screenshot.PNG">
+<image class="readMeImage" src="./public/screenshot.PNG" alt="landing page">
