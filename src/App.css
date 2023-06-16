@@ -172,6 +172,7 @@ header {
 
 span {
   color: var(--light-span);
+  font-size: 1.0875rem;
   font-style: italic;
   text-align: center;
 }
