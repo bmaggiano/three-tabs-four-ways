@@ -44,7 +44,7 @@ export default function LocalStorageSection() {
           {/* this section will be hidden until users hover over description-container-three */}
           <p>
             <span className="hidden">
-              // create messages array & localStorageMessage variable
+              {'//'} create messages array & localStorageMessage variable
               <br />
               <span className="code-example">
                 const [localStorageMessage, setLocalStorageMessage] =
@@ -53,7 +53,7 @@ export default function LocalStorageSection() {
                 const [messages] = ["This is the message for tab 1", ...];
               </span>
               <br />
-              // useEffect hook to set localStorage with messages array
+              {'//'} useEffect hook to set localStorage with stringified messages array
               <br />
               <span className="code-example">
                 useEffect = () =&gt; {"{"}
@@ -62,21 +62,20 @@ export default function LocalStorageSection() {
                 {"}"};
               </span>
               <br />
-              // onClick, retrieve message from localStorage and set value
+              {'//'} onClick, retrieve message from localStorage, parse data, and set value
               <br />
               <span className="code-example">
-                onClick={"{"}() =&gt; {"{"}
+                const handleClick (index)= =&gt; {"{"}
                 <br />
                 const localMessage = localStorage.getItem("messages");
                 <br />
                 const storedMessages = JSON.parse(localMessage);
                 <br />
-                setLocalStorageMessage(storedMessages[0]);
-                {"}"}
+                setLocalStorageMessage(storedMessages[index]);
                 {"}"}
               </span>
               <br />
-              // style to your liking
+              {'//'} style to your liking
             </span>
           </p>
         </div>
